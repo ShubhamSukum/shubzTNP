@@ -9,6 +9,9 @@ export const Navbar = () => {
 
   return (<>
     <div className='main'>
+        
+        <Link to="/company">Company</Link>
+
         <GoogleLogin
           onSuccess={(res)=>{
             console.log(JWTdecode(res.credential));
@@ -17,7 +20,7 @@ export const Navbar = () => {
             console.error("Google Error Occured!!")
           }}
         />
-        <Link to="/company">Company</Link>
+        
         {/* <h1>Calender</h1> */}
     </div>
   </>)
