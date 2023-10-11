@@ -1,11 +1,7 @@
 import mongoose from "mongoose";
 
-const companySchema=new mongoose.Schema({
+const companyPpoSchema=new mongoose.Schema({
     company:{
-        type:String,
-        required:true
-    },
-    pointer:{
         type:String,
         required:true
     },
@@ -38,11 +34,7 @@ const companySchema=new mongoose.Schema({
         required:true
     },
     salary:{
-        type:Number,
-        required:true
-    },
-    date:{
-        type:Date,
+        type:Number,   
         required:true
     },
     investment:{
@@ -51,6 +43,6 @@ const companySchema=new mongoose.Schema({
     }
 })
 
-export const companyModel=mongoose.model("zeros",companySchema)
-export const companyModel2021=mongoose.model("ones",companySchema);
-export const companyModel2022=mongoose.model("twos",companySchema);
+export const ppoModel=mongoose.model("ppozeros",companyPpoSchema);
+export const ppoModel2021=mongoose.model("ppoones",companyPpoSchema);
+export const ppoModel2022=mongoose.model("ppotwos",companyPpoSchema);
