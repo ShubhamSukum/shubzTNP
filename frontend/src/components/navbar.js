@@ -16,6 +16,9 @@ export const Navbar = () => {
             console.error("Google Error Occured!!")
           }}
         />
+        <h1>HOME</h1>
+        <h1>Companies</h1>
+        <h1>Calender</h1>
     </div>
   </>)
 }
