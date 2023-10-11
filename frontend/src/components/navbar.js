@@ -3,6 +3,7 @@ import "./navbar.css"
 
 import {GoogleLogin} from "@react-oauth/google";
 import JWTdecode from "jwt-decode";
+import {Link} from "react-router-dom";
 
 export const Navbar = () => {
 
@@ -16,9 +17,8 @@ export const Navbar = () => {
             console.error("Google Error Occured!!")
           }}
         />
-        <h1>HOME</h1>
-        <h1>Companies</h1>
-        <h1>Calender</h1>
+        <Link to="/company">Company</Link>
+        {/* <h1>Calender</h1> */}
     </div>
   </>)
 }
