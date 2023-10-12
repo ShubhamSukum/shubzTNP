@@ -9,4 +9,29 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #333;
+}
+
+.nav-link{
+    color: #fff; /* Set text color to white */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 15px; /* Add some space between links */
+    font-weight: bold; /* Optionally, make the text bold */
+    border: 2px solid white;
+    padding: 3px;
+}
+
+.home-page{
+    /* border: 2px orange solid; */
+    height: 87vh;
+    width:100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-page h1{
+    font-size: 10vh;
 }
