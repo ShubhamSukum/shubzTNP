@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
 
@@ -6,7 +6,8 @@ export const C2020ppo = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/pict/2020ppo")
+    axios
+      .get("https://tracktnp-backend.onrender.com/pict/2020ppo")
       .then((res) => {
         setData(res.data);
       })
@@ -32,23 +33,21 @@ export const C2020ppo = () => {
             </thead>
 
             <tbody>
-                  {
-                    data.map((info)=>{
-                        return(
-                          <tr key={info._id}>
-                              <td>{info.company}</td>
-                              <td>{info.branch}</td>
-                              <td>{info.total}</td>
-                              <td>{info.salary}</td>
-                              <td>{info.investment}</td>
-                          </tr>
-                        )
-                    })
-                  }
+              {data.map((info) => {
+                return (
+                  <tr key={info._id}>
+                    <td>{info.company}</td>
+                    <td>{info.branch}</td>
+                    <td>{info.total}</td>
+                    <td>{info.salary}</td>
+                    <td>{info.investment}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
       </div>
     </center>
-  )
-}
+  );
+};
