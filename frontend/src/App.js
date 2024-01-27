@@ -15,6 +15,7 @@ import {C2021ppo} from "./pages/C2021ppo";
 import {C2022} from "./pages/C2022";
 import {C2022ppo} from "./pages/C2022ppo";
 // 
+import {C2023} from "./pages/C2023";
 
 function App() {
   
@@ -33,6 +34,7 @@ function App() {
               <Route path='/company2022' element={<C2022/>}/>
               <Route path='/company2022PPO' element={<C2022ppo/>}/>
 
+              <Route path='/company2023' element={<C2023/>}/>
             </Routes>
             <Navbar/>
         </Router> 

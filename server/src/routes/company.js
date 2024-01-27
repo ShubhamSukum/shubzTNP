@@ -1,6 +1,12 @@
 import express from "express";
+import axios from "axios";
 import {companyModel,companyModel2021,companyModel2022} from "../model/company.js";
 import {ppoModel,ppoModel2021,ppoModel2022} from "../model/ppo.js"; 
+
+import dotenv from "dotenv";
+dotenv.config();
+
+const googleSheet=process.env.googleSheet;
 
 const routerZero=express.Router();
 
@@ -64,5 +70,19 @@ routerZero.get("/2022ppo",async(req,res)=>{
 })
 // ******************************************** 2022 ********************************************
 
+
+// ******************************************** 2023 ********************************************
+routerZero.get("/2023",async(req,res)=>{
+    try {
+        const response = await axios.get(googleSheet);
+        const data = response.data.data;
+
+        res.json(data);
+      } catch (error) {
+        console.error('Error fetching data:', error.message);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
+})
+// ******************************************** 2023 ********************************************
 
 export {routerZero};

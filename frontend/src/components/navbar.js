@@ -17,6 +17,8 @@ export const Navbar = () => {
 
         <Link to="/company2022" className='nav-link'>2022</Link>
         <Link to="/company2022PPO" className='nav-link'>2022 PPO</Link>
+
+        <Link to="/company2023" className='nav-link'>2023</Link>
     </div>
   </>)
 }

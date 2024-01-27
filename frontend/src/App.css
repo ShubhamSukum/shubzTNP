@@ -54,7 +54,7 @@
     justify-content: space-evenly;
 } */
 
-/* table {
+table {
     border: 2px solid forestgreen;
     width: 800px;
     height: 200px;
@@ -66,9 +66,8 @@ th {
  
 td {
     text-align: center;
-} */
+}
 
-/*  */
 
 /* #table-wrapper {
     position:relative;
@@ -107,12 +106,3 @@ td {
     color: black;
     z-index: 1;
 } */
-
-
-
-  
-  
-  
-  
-  
-  
