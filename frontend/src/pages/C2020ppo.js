@@ -18,17 +18,17 @@ export const C2020ppo = () => {
 
   return (
     <center>
-      <h1 style={{ margin: "1vh" }}>2020 PPO</h1>
+      <h1 style={{ margin: "1vh" }}>2020-21 PPO</h1>
       <div id="table-wrapper">
         <div id="table-scroll">
-          <table>
+          <table className="table table-bordered">
             <thead>
               <tr>
-                <th className="sticky-header">Company</th>
-                <th className="sticky-header">Branch</th>
-                <th className="sticky-header">Total</th>
-                <th className="sticky-header">Salary</th>
-                <th className="sticky-header">Investment</th>
+                <th className="sticky-header"><center>Company</center></th> 
+                <th className="sticky-header"><center>Branch</center></th> 
+                <th className="sticky-header"><center>Total</center></th> 
+                <th className="sticky-header"><center>Salary</center></th> 
+                <th className="sticky-header"><center>Investment</center></th>
               </tr>
             </thead>
 

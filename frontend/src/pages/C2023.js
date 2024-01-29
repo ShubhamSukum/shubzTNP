@@ -27,11 +27,11 @@ export const C2023 = () => {
 
         <div id="table-wrapper">
           <div id="table-scroll">
-            <table style={{width:"80vh"}}>
+            <table style={{width:"80vh"}} className="table table-bordered">
               <thead>
                 <tr>
-                  <th className="sticky-header">Company</th>
-                  <th className="sticky-header">Total</th>
+                  <th className="sticky-header"><center>Company</center></th> 
+                  <th className="sticky-header"><center>Total</center></th>
                 </tr>
               </thead>
 

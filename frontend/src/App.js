@@ -17,6 +17,12 @@ import {C2022ppo} from "./pages/C2022ppo";
 // 
 import {C2023} from "./pages/C2023";
 
+// Visualize
+import {V2020} from "./visuals/V2020";
+import {V2021} from "./visuals/V2021";
+import {V2022} from "./visuals/V2022";
+import {V2023} from "./visuals/V2023";
+
 function App() {
   
   return (
@@ -35,6 +41,15 @@ function App() {
               <Route path='/company2022PPO' element={<C2022ppo/>}/>
 
               <Route path='/company2023' element={<C2023/>}/>
+
+              {/* Chart JS */}
+
+              <Route path='/visualize2020' element={<V2020/>}/>
+              <Route path='/visualize2021' element={<V2021/>}/>
+              <Route path='/visualize2022' element={<V2022/>}/>
+              <Route path='/visualize2023' element={<V2023/>}/>
+
+              {/* Chart JS */}
             </Routes>
             <Navbar/>
         </Router> 
