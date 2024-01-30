@@ -1,24 +1,54 @@
-import React from 'react';
-import "./navbar.css"
+import React from "react";
+import "./navbar.css";
 
-// import {GoogleLogin} from "@react-oauth/google";
-// import JWTdecode from "jwt-decode";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
+  return (
+    <>
+      <div className="main">
+        <Link to="/">
+          <button className="btn btn-dark" title="Return Home">Tabular format ⏩</button>
+        </Link>
+        <Link to="/company2020">
+          <button className="btn btn-primary">
+            <b>2020-21</b>
+          </button>
+        </Link>
+        <Link to="/company2020PPO">
+          <button className="btn btn-primary">
+            <b>2020-21 PPO</b>
+          </button>
+        </Link>
 
-  return (<>
-    <div className='main'> 
-        <Link to="/company2020" className='nav-link'>2020</Link>
-        <Link to="/company2020PPO" className='nav-link'>2020 PPO</Link>
+        <Link to="/company2021">
+          <button className="btn btn-warning">
+            <b>2021-22</b>
+          </button>
+        </Link>
+        <Link to="/company2021PPO">
+          <button className="btn btn-warning">
+            <b>2021-22 PPO</b>
+          </button>
+        </Link>
 
-        <Link to="/company2021" className='nav-link'>2021</Link>
-        <Link to="/company2021PPO" className='nav-link'>2021 PPO</Link>
+        <Link to="/company2022">
+          <button className="btn btn-success">
+            <b>2022-23</b>
+          </button>
+        </Link>
+        <Link to="/company2022PPO">
+          <button className="btn btn-success">
+            <b>2022-23 PPO</b>
+          </button>
+        </Link>
 
-        <Link to="/company2022" className='nav-link'>2022</Link>
-        <Link to="/company2022PPO" className='nav-link'>2022 PPO</Link>
-
-        <Link to="/company2023" className='nav-link'>2023</Link>
-    </div>
-  </>)
-}
+        <Link to="/company2023">
+          <button className="btn btn-danger">
+            <b>2023-24 PPO</b>
+          </button>
+        </Link>
+      </div>
+    </>
+  );
+};

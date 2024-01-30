@@ -1,15 +1,16 @@
 .main{
     position: absolute;
     bottom: 0;
-    left:25%;
-    border: 2px solid black;
+    left:14.5%;
+    border: 5px solid black;
+    border-radius: 5px;
     height: 10vh;
-    width:50%;
+    width:70%;
     /* background-color: aqua; */
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #333;
+    background-color: #ffffff;
 }
 
 .nav-link{

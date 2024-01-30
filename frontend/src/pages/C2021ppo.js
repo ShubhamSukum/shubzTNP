@@ -1,34 +1,67 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
+import { BackToHome } from "../components/backToHome";
 
 export const C2021ppo = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     axios
       .get("https://tracktnp-backend.onrender.com/pict/2021ppo")
       .then((res) => {
         setData(res.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
+        setError("Error fetching data.");
+        setLoading(false);
       });
   }, []);
 
+  if (loading) {
+    return (
+      <>
+        <div className="loader-container">
+          <div class="loader"></div>
+          <h2>Loading data...</h2>
+          <br/>
+          <h2>Please wait...</h2>
+        </div>
+      </>
+    );
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <center>
-      <h1 style={{ margin: "1vh" }}>2021 PPO</h1>
+      <h1 style={{ margin: "1vh" }}>2021-22 PPO<BackToHome/></h1>
       <div id="table-wrapper">
         <div id="table-scroll">
-          <table>
+          <table className="table table-bordered">
             <thead>
               <tr>
-                <th className="sticky-header">Company</th>
-                <th className="sticky-header">Branch</th>
-                <th className="sticky-header">Total</th>
-                <th className="sticky-header">Salary</th>
-                <th className="sticky-header">Investment</th>
+                <th className="sticky-header">
+                  <center>Company</center>
+                </th>
+                <th className="sticky-header">
+                  <center>Branch</center>
+                </th>
+                <th className="sticky-header">
+                  <center>Total</center>
+                </th>
+                <th className="sticky-header">
+                  <center>Salary</center>
+                </th>
+                <th className="sticky-header">
+                  <center>Investment</center>
+                </th>
               </tr>
             </thead>
 

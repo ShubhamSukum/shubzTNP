@@ -1,5 +1,5 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
 }
 
@@ -11,17 +11,16 @@
     height: 80vh;
     overflow: auto;
 }
-/* margin-top: 20px; */
 
 #table-wrapper table {
     width: 70%;
 }
 
 #table-wrapper table * {
-    background:rgb(112, 235, 157);
-    color:black;
+    background: rgb(112, 235, 157);
+    color: black;
 }
-  
+
 .sticky-header {
     position: sticky;
     top: 0;
@@ -30,79 +29,68 @@
     z-index: 1;
 }
 
-/* .company-title-year{
-    padding:2vh;
-    height: 75vh;
-    width:70vw;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    border: 2px orange solid;
-
-    overflow-x: hidden;
-    overflow-y: auto;
-} */
-
-/* .company-data{
-    width: 100%;
-    height: 5vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-} */
-
 table {
     border: 2px solid forestgreen;
     width: 800px;
     height: 200px;
 }
- 
+
 th {
     border-bottom: 1px solid black;
 }
- 
+
 td {
     text-align: center;
 }
 
+/* charts */
 
-/* #table-wrapper {
-    position:relative;
-} */
+.Charts-Scrollable {
+    height: 79vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
 
-/* height:150px; */
-/* #table-scroll {
-    height:80vh; 
-    overflow:auto;  
-    margin-top:20px;
 }
 
-
-#table-wrapper table {
-    width:70%;
+.pie-arranging {
+    display: flex;
 }
 
-#table-wrapper table * {
-    background:rgb(112, 235, 157);
-    color:black;
+.yearly-stats-box{
+    width: 50vh;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 2fr));
+    gap: 10px;  
 }
 
-#table-wrapper table thead th .text {
-    position:absolute;   
-    top:-20px;
-    z-index:2;
-    height:20px;
-    width:35%;
-    border:1px solid red;
+/* charts */
+
+/* LOADER */
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+    flex-direction: column;
 }
 
-.sticky-header th {
-    position: sticky;
-    top: 0;
-    background: rgb(112, 235, 157);
-    color: black;
-    z-index: 1;
-} */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+/* LOADER */
