@@ -51,8 +51,16 @@ const PpoStats = () => {
       });
   }, []);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
-    <div style={{ height: "60vh", width: "68vw", marginBottom: "10vh" }}>
+    <div style={{ height: "50vh", width: "60vw", marginBottom:"30vh"}}>
       <h3>PPO Given by companies: Count & Salary</h3>
       {chartData && (
         <div>

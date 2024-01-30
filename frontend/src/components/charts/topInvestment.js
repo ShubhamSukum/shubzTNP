@@ -47,7 +47,7 @@ const TopInvestors = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading... As it's hosted for FREE</div>;
   }
 
   if (error) {

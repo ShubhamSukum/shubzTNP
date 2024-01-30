@@ -19,10 +19,8 @@ const DepartmentStats = () => {
         if (Array.isArray(data)) {
           const sumIT = data.reduce((total, company) => total + company.IT, 0);
           const sumCE = data.reduce((total, company) => total + company.CE, 0);
-          const sumENTC = data.reduce(
-            (total, company) => total + company.ENTC,
-            0
-          );
+          const sumENTC = data.reduce((total, company) => total + company.ENTC,0);
+          
           const remainingInvestmentIt = 240 - sumIT;
           const remainingInvestmentCe = 320 - sumCE;
           const remainingInvestmentEntc = 320 - sumENTC;
@@ -82,9 +80,17 @@ const DepartmentStats = () => {
       });
   }, []);
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
-    <div style={{ marginBottom:"10vh" }}>
-      <h1 style={{ marginBottom:"2vh" }}>Department-wise Stats</h1>
+    <div style={{ marginBottom: "10vh" }}>
+      <h1 style={{ marginBottom: "2vh" }}>Department-wise Stats</h1>
       <div className="pie-arranging">
         <div style={{ height: "60vh", width: "80vw" }}>
           <h3>Students Placed in CE</h3>

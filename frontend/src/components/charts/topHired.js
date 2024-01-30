@@ -48,7 +48,7 @@ const TopHired = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading... It might take 30 secs</div>;
   }
 
   if (error) {

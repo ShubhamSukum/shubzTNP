@@ -57,6 +57,14 @@ td {
     display: flex;
 }
 
+.yearly-stats-box{
+    width: 50vh;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 2fr));
+    gap: 10px;  
+}
+
 /* charts */
 
 /* LOADER */
