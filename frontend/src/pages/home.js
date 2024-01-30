@@ -7,6 +7,7 @@ export const Home = () => {
     <>
       <div className="home-page">
         <h1>TrackTNP</h1>
+        <h3>Unleashes the Power of Visualized College Placement Reports.</h3>
         <br />
         <br />
 

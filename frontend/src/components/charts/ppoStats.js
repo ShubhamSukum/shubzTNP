@@ -4,6 +4,8 @@ import axios from "axios";
 
 const PpoStats = () => {
   const [chartData, setChartData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     axios
@@ -29,7 +31,7 @@ const PpoStats = () => {
               },
               {
                 type: "bar",
-                label: "Salary",
+                label: "Salary in Lakhs",
                 data: salaryData,
                 backgroundColor: "rgba(255,99,132,0.6)",
                 borderColor: "rgba(255,99,132,1)",
@@ -39,16 +41,19 @@ const PpoStats = () => {
           };
 
           setChartData(chartData);
+          setLoading(false);
         }
       })
       .catch((err) => {
         console.log(err);
+        setError("Error fetching data.");
+        setLoading(false);
       });
   }, []);
 
   return (
     <div style={{ height: "60vh", width: "68vw", marginBottom: "10vh" }}>
-      <h3>PPO Given by companies and Count</h3>
+      <h3>PPO Given by companies: Count & Salary</h3>
       {chartData && (
         <div>
           <Bar

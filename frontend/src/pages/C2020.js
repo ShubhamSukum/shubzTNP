@@ -1,36 +1,72 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
+import {BackToHome} from "../components/backToHome";
 
 export const C2020 = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     axios
       .get("https://tracktnp-backend.onrender.com/pict/2020")
       .then((res) => {
         setData(res.data);
+        setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        setError("Error fetching data.");
+        console.error(err);
+        setLoading(false);
       });
   }, []);
 
+  if (loading) {
+    return (
+      <>
+        <div className="loader-container">
+          <div class="loader"></div>
+          <h2>Loading data...</h2>
+          <h2>As it is hosted for free!!</h2>
+        </div>
+      </>
+    );
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <center>
-      <h1 style={{ margin: "1vh" }}>2020-21</h1>
+      <h1 style={{ margin: "1vh" }}>2020-21<BackToHome/></h1>
       <div id="table-wrapper">
         <div id="table-scroll">
           <table className="table table-bordered">
             <thead>
               <tr>
-                <th className="sticky-header"><center>Company</center></th> 
-                <th className="sticky-header"><center>Pointer</center></th> 
-                <th className="sticky-header"><center>Branch</center></th> 
-                <th className="sticky-header"><center>Total</center></th> 
-                <th className="sticky-header"><center>Salary</center></th> 
-                <th className="sticky-header"><center>Date</center></th> 
-                <th className="sticky-header"><center>Investment</center></th> 
+                <th className="sticky-header">
+                  <center>Company</center>
+                </th>
+                <th className="sticky-header">
+                  <center>Pointer</center>
+                </th>
+                <th className="sticky-header">
+                  <center>Branch</center>
+                </th>
+                <th className="sticky-header">
+                  <center>Total</center>
+                </th>
+                <th className="sticky-header">
+                  <center>Salary</center>
+                </th>
+                <th className="sticky-header">
+                  <center>Date</center>
+                </th>
+                <th className="sticky-header">
+                  <center>Investment</center>
+                </th>
               </tr>
             </thead>
 

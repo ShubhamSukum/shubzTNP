@@ -7,6 +7,8 @@ const DepartmentStats = () => {
   const [itData, setItData] = useState(null);
   const [ceData, setCeData] = useState(null);
   const [entcData, setEntcData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     axios
@@ -70,10 +72,13 @@ const DepartmentStats = () => {
           setItData(chartDataIT);
           setCeData(chartDataCE);
           setEntcData(chartDataEntc);
+          setLoading(false);
         }
       })
       .catch((err) => {
         console.log(err);
+        setError("Error fetching data.");
+        setLoading(false);
       });
   }, []);
 
