@@ -22,7 +22,7 @@ export const C2023 = () => {
     <>
       <center>
         <h1 style={{ margin: "1vh" }}>
-          2023
+          2023-24
         </h1>
 
         <div id="table-wrapper">

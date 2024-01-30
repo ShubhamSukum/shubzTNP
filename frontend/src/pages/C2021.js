@@ -18,7 +18,7 @@ export const C2021 = () => {
 
   return (
     <center>
-      <h1 style={{ margin: "1vh" }}>2021</h1>
+      <h1 style={{ margin: "1vh" }}>2021-22</h1>
       <div id="table-wrapper">
         <div id="table-scroll">
           <table className="table table-bordered">

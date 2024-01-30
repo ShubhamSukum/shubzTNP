@@ -46,7 +46,7 @@ td {
 /* charts */
 
 .Charts-Scrollable{
-    height: 90vh;
+    height: 79vh;
     width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;

@@ -18,7 +18,7 @@ export const C2022ppo = () => {
 
   return (
     <center>
-      <h1 style={{ margin: "1vh" }}>2022 PPO</h1>
+      <h1 style={{ margin: "1vh" }}>2022-23 PPO</h1>
       <div id="table-wrapper">
         <div id="table-scroll">
           <table className="table table-bordered">

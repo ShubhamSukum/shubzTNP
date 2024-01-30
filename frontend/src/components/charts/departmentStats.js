@@ -78,7 +78,7 @@ const DepartmentStats = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ marginBottom:"10vh" }}>
       <h1 style={{ marginBottom:"2vh" }}>Department-wise Stats</h1>
       <div className="pie-arranging">
         <div style={{ height: "60vh", width: "80vw" }}>
