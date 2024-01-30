@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import "../App.css";
 import {TopHired} from "../components/charts/topHired";
 import { TopInvestors } from "../components/charts/topInvestment";
-import "../App.css";
+import { DepartmentStats } from "../components/charts/departmentStats";
 
 export const V2020 = () => {
 
@@ -11,6 +11,7 @@ export const V2020 = () => {
         <div className="Charts-Scrollable">
         <TopHired />
         <TopInvestors/>
+        <DepartmentStats/>
         </div>
         
       </center>

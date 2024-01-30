@@ -57,7 +57,7 @@ const TopInvestors = () => {
   return (
     <>
       <div className="container-fluid">
-        <div style={{ height: "60vh", width: "80vw" }}>
+        <div style={{ height: "60vh", width: "80vw",marginBottom: "10vh" }}>
           <h3>Top 10 Investors</h3>
           <Bar
             data={topInvestorsData}

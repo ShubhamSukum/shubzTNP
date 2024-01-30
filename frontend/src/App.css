@@ -52,3 +52,9 @@ td {
     overflow-y: auto;
 
 }
+
+.pie-arranging{
+    display: flex;
+}
+
+/* charts */
