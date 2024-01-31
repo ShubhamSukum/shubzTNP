@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
 import { BackToHome } from "../components/backToHome";
+import {api2021} from "../configs/config";
 
 export const C2021 = () => {
   const [data, setData] = useState([]);
@@ -10,7 +11,7 @@ export const C2021 = () => {
 
   useEffect(() => {
     axios
-      .get("https://tracktnp-backend.onrender.com/pict/2021")
+      .get(api2021)
       .then((res) => {
         setData(res.data);
         setLoading(false);
@@ -26,7 +27,7 @@ export const C2021 = () => {
     return (
       <>
         <div className="loader-container">
-          <div class="loader"></div>
+          <div className="loader"></div>
           <h2>Loading data...</h2>
           <br/>
           <h2>Please wait...</h2>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../../App.css";
+import {api2020,api2020ppo} from "../../configs/config";
 
 export const YearlyStat = () => {
   const [placedStud, setPlacedStud] = useState("");
@@ -14,7 +15,7 @@ export const YearlyStat = () => {
 
   useEffect(() => {
     axios
-      .get("https://tracktnp-backend.onrender.com/pict/2020")
+      .get(api2020)
       .then((res) => {
         const data = res.data;
 
@@ -40,7 +41,7 @@ export const YearlyStat = () => {
       });
 
       axios
-      .get("https://tracktnp-backend.onrender.com/pict/2020ppo")
+      .get(api2020ppo)
       .then((res) => {
         const data = res.data;
 
@@ -53,9 +54,6 @@ export const YearlyStat = () => {
             (total, company) => total + company.investment,
             0
           );
-
-          console.log(totalPpo)
-          console.log(invested)
 
           setInvestPpo(invested.toFixed(2))
           setPpo(totalPpo);

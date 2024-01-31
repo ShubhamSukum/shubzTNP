@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
+import {api2020} from "../../configs/config";
 
 const TopHired = () => {
   const [topCompaniesData, setTopCompaniesData] = useState([]);
@@ -10,7 +11,7 @@ const TopHired = () => {
 
   useEffect(() => {
     axios
-      .get("https://tracktnp-backend.onrender.com/pict/2020")
+      .get(api2020)
       .then((res) => {
         const data = res.data;
 

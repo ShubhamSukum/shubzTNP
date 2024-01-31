@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
+import {api2020} from "../../configs/config";
 
 const TopSalary = () => {
   const [topSalary, setTopSalary] = useState([]);
@@ -10,7 +11,7 @@ const TopSalary = () => {
 
   useEffect(() => {
     axios
-      .get("https://tracktnp-backend.onrender.com/pict/2020")
+      .get(api2020)
       .then((res) => {
         const data = res.data;
 
@@ -58,7 +59,7 @@ const TopSalary = () => {
   return (
     <>
       <div className="container-fluid">
-        <div style={{ height: "70vh", width: "100vw", marginBottom: "10vh" }}>
+        <div style={{ height: "60vh", width: "100vw", marginBottom: "10vh" }}>
           <h3>Top 10 Highest Salary Offered</h3>
           <Bar
             data={topSalary}

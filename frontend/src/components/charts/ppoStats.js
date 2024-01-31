@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
 import axios from "axios";
+import {api2020ppo} from "../../configs/config";
 
 const PpoStats = () => {
   const [chartData, setChartData] = useState(null);
@@ -9,7 +10,7 @@ const PpoStats = () => {
 
   useEffect(() => {
     axios
-      .get("https://tracktnp-backend.onrender.com/pict/2020ppo")
+      .get(api2020ppo)
       .then((res) => {
         const data = res.data;
 

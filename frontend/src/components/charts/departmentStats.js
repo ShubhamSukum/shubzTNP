@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Pie } from "react-chartjs-2";
 import axios from "axios";
 import "../../App.css";
+import {api2020} from "../../configs/config";
 
 const DepartmentStats = () => {
   const [itData, setItData] = useState(null);
@@ -12,7 +13,7 @@ const DepartmentStats = () => {
 
   useEffect(() => {
     axios
-      .get("https://tracktnp-backend.onrender.com/pict/2020")
+      .get(api2020)
       .then((res) => {
         const data = res.data;
 
@@ -70,7 +71,7 @@ const DepartmentStats = () => {
           setItData(chartDataIT);
           setCeData(chartDataCE);
           setEntcData(chartDataEntc);
-          setLoading(false);
+          setLoading(false);          
         }
       })
       .catch((err) => {
