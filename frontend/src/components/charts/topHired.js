@@ -1,56 +1,34 @@
 import { useEffect, useState } from "react";
-// import axios from "axios";
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
-// import {api2020} from "../../configs/config";
 
-import {useData} from "../../context/context";
+import { useData } from "../../context/context2020";
 
-const TopHired = () => {
+const TopHired = (props) => {
   const [topCompaniesData, setTopCompaniesData] = useState([]);
-  // const [, setLoading] = useState(true);
-  // const [, setError] = useState(null);
-
-  const {data,error,loading}=useData();
+  const { data, error, loading } = useData();
 
   useEffect(() => {
-    // axios
-    //   .get(api2020)
-    //   .then((res) => {
-    //     const data = res.data;
+    if (Array.isArray(data)) {
+      const sortedData = data.sort((a, b) => b.total - a.total);
+      const top10Companies = sortedData.slice(0, 10);
 
-        if (Array.isArray(data)) {
-          const sortedData = data.sort((a, b) => b.total - a.total);
-          const top10Companies = sortedData.slice(0, 10);
-
-          const chartData = {
-            labels: top10Companies.map((company) => company.company),
-            datasets: [
-              {
-                label: "Total Hires",
-                backgroundColor: "rgba(75,192,192,0.6)",
-                borderColor: "rgba(75,192,192,1)",
-                borderWidth: 1,
-                hoverBackgroundColor: "rgba(75,192,192,0.8)",
-                hoverBorderColor: "rgba(75,192,192,1)",
-                data: top10Companies.map((company) => company.total),
-              },
-            ],
-          };
-          setTopCompaniesData(chartData);
-          // setLoading(false);
-        } else {
-          // setError("Data is not in the expected format.");
-          // setLoading(false);
-        }
-
-
-      // })
-      // .catch((err) => {
-      //   console.log(err);
-      //   setError("Error fetching data.");
-      //   setLoading(false);
-      // });
+      const chartData = {
+        labels: top10Companies.map((company) => company.company),
+        datasets: [
+          {
+            label: "Total Hires",
+            backgroundColor: "rgba(75,192,192,0.6)",
+            borderColor: "rgba(75,192,192,1)",
+            borderWidth: 1,
+            hoverBackgroundColor: "rgba(75,192,192,0.8)",
+            hoverBorderColor: "rgba(75,192,192,1)",
+            data: top10Companies.map((company) => company.total),
+          },
+        ],
+      };
+      setTopCompaniesData(chartData);
+    }
   }, [data]);
 
   if (loading) {
@@ -65,7 +43,7 @@ const TopHired = () => {
     <>
       <div className="container-fluid">
         <div style={{ height: "60vh", width: "80vw", marginBottom: "10vh" }}>
-          <h3>Top 10 Hiring Companies</h3>
+          <h3>Top 10 Hiring Companies in {props.year}</h3>
           <Bar
             data={topCompaniesData}
             options={{

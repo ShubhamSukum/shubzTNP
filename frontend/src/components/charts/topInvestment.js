@@ -1,19 +1,12 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { Bar } from "react-chartjs-2";
-import {api2020} from "../../configs/config"
+import { useData } from "../../context/context2020";
 
-const TopInvestors = () => {
+const TopInvestors = (props) => {
   const [topInvestorsData, setTopInvestorsData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const {data,error,loading}=useData();
 
   useEffect(() => {
-    axios
-      .get(api2020)
-      .then((res) => {
-        const data = res.data;
-
         if (Array.isArray(data)) {
           const sortedData = data.sort((a, b) => b.investment - a.investment);
           const top10Investors = sortedData.slice(0, 10);
@@ -22,7 +15,7 @@ const TopInvestors = () => {
             labels: top10Investors.map((investor) => investor.company),
             datasets: [
               {
-                label: "Total Investment",
+                label: "Total Investment in Lacs",
                 backgroundColor: "rgba(75,192,192,0.6)",
                 borderColor: "rgba(75,192,192,1)",
                 borderWidth: 1,
@@ -32,20 +25,9 @@ const TopInvestors = () => {
               },
             ],
           };
-
           setTopInvestorsData(chartData);
-          setLoading(false);
-        } else {
-          setError("Data is not in the expected format.");
-          setLoading(false);
         }
-      })
-      .catch((err) => {
-        console.log(err);
-        setError("Error fetching data.");
-        setLoading(false);
-      });
-  }, []);
+  }, [data]);
 
   if (loading) {
     return <div>Loading... As it's hosted for FREE</div>;
@@ -58,8 +40,8 @@ const TopInvestors = () => {
   return (
     <>
       <div className="container-fluid">
-        <div style={{ height: "60vh", width: "80vw",marginBottom: "10vh" }}>
-          <h3>Top 10 Investors Companies</h3>
+        <div style={{ height: "60vh", width: "80vw", marginBottom: "10vh" }}>
+          <h3>Top 10 Investors Companies in {props.year}</h3>
           <Bar
             data={topInvestorsData}
             options={{

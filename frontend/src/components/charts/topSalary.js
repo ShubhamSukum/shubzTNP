@@ -1,20 +1,14 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
-import {api2020} from "../../configs/config";
 
-const TopSalary = () => {
+import {useData} from "../../context/context2020";
+
+const TopSalary = (props) => {
   const [topSalary, setTopSalary] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const {data,error,loading} = useData();
 
   useEffect(() => {
-    axios
-      .get(api2020)
-      .then((res) => {
-        const data = res.data;
-
         if (Array.isArray(data)) {
           const sortedData = data.sort((a, b) => b.salary - a.salary);
           const top10Salary = sortedData.slice(0, 10);
@@ -35,18 +29,8 @@ const TopSalary = () => {
           };
 
           setTopSalary(chartData);
-          setLoading(false);
-        } else {
-          setError("Data is not in the expected format.");
-          setLoading(false);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        setError("Error fetching data.");
-        setLoading(false);
-      });
-  }, []);
+        } 
+  }, [data]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -59,8 +43,8 @@ const TopSalary = () => {
   return (
     <>
       <div className="container-fluid">
-        <div style={{ height: "60vh", width: "100vw", marginBottom: "10vh" }}>
-          <h3>Top 10 Highest Salary Offered</h3>
+        <div style={{ height: "65vh", width: "100vw", marginBottom: "10vh" }}>
+          <h3>Top 10 Highest Salary Offered in {props.year}</h3>
           <Bar
             data={topSalary}
             options={{
