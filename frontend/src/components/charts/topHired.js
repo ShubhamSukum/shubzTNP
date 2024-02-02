@@ -1,19 +1,23 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
-import {api2020} from "../../configs/config";
+// import {api2020} from "../../configs/config";
+
+import {useData} from "../../context/context";
 
 const TopHired = () => {
   const [topCompaniesData, setTopCompaniesData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  // const [, setLoading] = useState(true);
+  // const [, setError] = useState(null);
+
+  const {data,error,loading}=useData();
 
   useEffect(() => {
-    axios
-      .get(api2020)
-      .then((res) => {
-        const data = res.data;
+    // axios
+    //   .get(api2020)
+    //   .then((res) => {
+    //     const data = res.data;
 
         if (Array.isArray(data)) {
           const sortedData = data.sort((a, b) => b.total - a.total);
@@ -33,20 +37,21 @@ const TopHired = () => {
               },
             ],
           };
-
           setTopCompaniesData(chartData);
-          setLoading(false);
+          // setLoading(false);
         } else {
-          setError("Data is not in the expected format.");
-          setLoading(false);
+          // setError("Data is not in the expected format.");
+          // setLoading(false);
         }
-      })
-      .catch((err) => {
-        console.log(err);
-        setError("Error fetching data.");
-        setLoading(false);
-      });
-  }, []);
+
+
+      // })
+      // .catch((err) => {
+      //   console.log(err);
+      //   setError("Error fetching data.");
+      //   setLoading(false);
+      // });
+  }, [data]);
 
   if (loading) {
     return <div>Loading... It might take 30 secs</div>;
