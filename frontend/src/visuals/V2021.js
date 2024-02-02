@@ -8,7 +8,7 @@ import { YearlyStat } from "../components/charts/yearlyStat";
 
 import { BackToHome } from "../components/backToHome";
 
-import { DataProvider } from "../context/context2021";
+import { DataProvider, useData } from "../context/context2021";
 
 export const V2021 = () => {
   return (
@@ -19,12 +19,12 @@ export const V2021 = () => {
             Visualization for 2021-22 <BackToHome />
           </h1>
           <div className="Charts-Scrollable">
-            <TopHired year="2021-22"/>
-            <TopInvestors year="2021-22"/>
-            <DepartmentStats year="2021-22"/>
-            <TopSalary year="2021-22"/>
-            <PpoStats year="2021-22"/>
-            <YearlyStat year="2021-22"/>
+            <TopHired year="2021-22" Context={useData}/>
+            <TopInvestors year="2021-22" Context={useData}/>
+            <DepartmentStats year="2021-22" Context={useData}/>
+            <TopSalary year="2021-22" Context={useData}/>
+            <PpoStats year="2021-22" Context={useData}/>
+            <YearlyStat year="2021-22" Context={useData}/>
           </div>
         </center>
       </DataProvider>

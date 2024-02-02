@@ -19,12 +19,12 @@ export const V2020 = () => {
             Visualization for 2020-21 <BackToHome />
           </h1>
           <div className="Charts-Scrollable">
-            <TopHired year="2020-21" />
-            <TopInvestors year="2020-21"/>
-            <DepartmentStats year="2020-21"/>
-            <TopSalary year="2020-21"/>
-            <PpoStats year="2020-21"/>
-            <YearlyStat year="2020-21"/>
+            <TopHired year="2020-21" Context={useData}/>
+            <TopInvestors year="2020-21" Context={useData}/>
+            <DepartmentStats year="2020-21" Context={useData}/>
+            <TopSalary year="2020-21" Context={useData}/>
+            <PpoStats year="2020-21" Context={useData}/>
+            <YearlyStat year="2020-21" Context={useData}/>
           </div>
         </center>
       </DataProvider>

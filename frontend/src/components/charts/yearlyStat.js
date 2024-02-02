@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "../../App.css";
-import { useData } from "../../context/context2020";
 
 export const YearlyStat = (props) => {
   const [placedStud, setPlacedStud] = useState("");
   const [invest, setInvest] = useState("");
 
   const [ppo, setPpo] = useState("");
-  const [investPpo, setInvestPpo] = useState("");
+  const [investPpo, setInvestPpo] = useState(""); 
 
-  const { data, dataPpo, error, errorPpo, loading, loadingPpo } = useData();
+  const { data, dataPpo, error, errorPpo, loading, loadingPpo } = props.Context();
 
   useEffect(() => {
     // for Normal

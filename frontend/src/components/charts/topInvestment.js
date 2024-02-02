@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
-import { useData } from "../../context/context2020";
 
 const TopInvestors = (props) => {
   const [topInvestorsData, setTopInvestorsData] = useState([]);
-  const {data,error,loading}=useData();
+  const {data,error,loading}=props.Context();
 
   useEffect(() => {
         if (Array.isArray(data)) {

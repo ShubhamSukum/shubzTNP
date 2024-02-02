@@ -18,14 +18,14 @@ export const Home = () => {
         </Link>
         <br />
         <Link to={"/visualize2021"}>
-          <button className="btn btn-warning" disabled>
-            <b>Visualize 2021-22 Data [under progress]</b>
+          <button className="btn btn-warning">
+            <b>Visualize 2021-22 Data</b>
           </button>
         </Link>
         <br />
         <Link to={"/visualize2022"}>
-          <button className="btn btn-success" disabled>
-            <b>Visualize 2022-23 Data [under progress]</b>
+          <button className="btn btn-success">
+            <b>Visualize 2022-23 Data</b>
           </button>
         </Link>
         <br />

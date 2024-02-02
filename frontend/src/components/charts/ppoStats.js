@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
-// import axios from "axios";
-// import { api2020ppo } from "../../configs/config";
-
-import { useData } from "../../context/context2020";
 
 const PpoStats = (props) => {
   const [chartData, setChartData] = useState(null);
-  const { dataPpo, errorPpo, loadingPpo } = useData();
+  const { dataPpo, errorPpo, loadingPpo } = props.Context();
 
   useEffect(() => {
     if (Array.isArray(dataPpo)) {

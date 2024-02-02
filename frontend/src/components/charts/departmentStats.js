@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Pie } from "react-chartjs-2";
 import "../../App.css";
 
-import { useData } from "../../context/context2020";
-
 const DepartmentStats = (props) => {
   const [itData, setItData] = useState(null);
   const [ceData, setCeData] = useState(null);
   const [entcData, setEntcData] = useState(null);
 
-  const { data, error, loading } = useData();
+  const { data, error, loading } = props.Context();
 
   useEffect(() => {
     if (Array.isArray(data)) {
