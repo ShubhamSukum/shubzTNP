@@ -14,16 +14,15 @@
 }
 
 .nav-link{
-    color: #fff; /* Set text color to white */
-    text-decoration: none; /* Remove underline from links */
-    margin: 0 15px; /* Add some space between links */
-    font-weight: bold; /* Optionally, make the text bold */
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
     border: 2px solid white;
     padding: 3px;
 }
 
 .home-page{
-    /* border: 2px orange solid; */
     height: 87vh;
     width:100vw;
 
@@ -35,4 +34,10 @@
 
 .home-page h1{
     font-size: 10vh;
+}
+
+.visualize-button{
+    width:20vw;
+    height:9vh;
+    font-size: larger;
 }
