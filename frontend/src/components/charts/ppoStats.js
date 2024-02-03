@@ -16,7 +16,7 @@ const PpoStats = (props) => {
         datasets: [
           {
             type: "bar",
-            label: "Total",
+            label: "Total Students",
             data: totalData,
             backgroundColor: "rgba(75,192,192,0.6)",
             borderColor: "rgba(75,192,192,1)",

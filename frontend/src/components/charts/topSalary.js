@@ -15,7 +15,7 @@ const TopSalary = (props) => {
             labels: top10Salary.map((company) => company.company),
             datasets: [
               {
-                label: "Highest Salary",
+                label: "Highest Salary in Lacs",
                 backgroundColor: "rgba(75,192,192,0.6)",
                 borderColor: "rgba(75,192,192,1)",
                 borderWidth: 1,

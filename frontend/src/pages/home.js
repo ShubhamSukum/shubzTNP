@@ -14,7 +14,7 @@ export const Home = () => {
         <Link to={"/visualize2020"}>
           <button className="visualize-button btn btn-primary">
             <b>Visualize 2020-21 Data</b>
-          </button> 
+          </button>
         </Link>
         <br />
         <Link to={"/visualize2021"}>
@@ -30,8 +30,8 @@ export const Home = () => {
         </Link>
         <br />
         <Link to={"/visualize2023"}>
-          <button className="visualize-button btn btn-danger" disabled>
-            <b>Visualize 2023-24 Data [under progress]</b>
+          <button className="visualize-button btn btn-danger">
+            <b>Visualize 2023-24 Data</b>
           </button>
         </Link>
       </div>
