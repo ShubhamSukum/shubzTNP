@@ -1,19 +1,12 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
 
-const TopSalary = () => {
+const TopSalary = (props) => {
   const [topSalary, setTopSalary] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const {data,error,loading} = props.Context();
 
   useEffect(() => {
-    axios
-      .get("https://tracktnp-backend.onrender.com/pict/2020")
-      .then((res) => {
-        const data = res.data;
-
         if (Array.isArray(data)) {
           const sortedData = data.sort((a, b) => b.salary - a.salary);
           const top10Salary = sortedData.slice(0, 10);
@@ -22,7 +15,7 @@ const TopSalary = () => {
             labels: top10Salary.map((company) => company.company),
             datasets: [
               {
-                label: "Highest Salary",
+                label: "Highest Salary in Lacs",
                 backgroundColor: "rgba(75,192,192,0.6)",
                 borderColor: "rgba(75,192,192,1)",
                 borderWidth: 1,
@@ -34,18 +27,8 @@ const TopSalary = () => {
           };
 
           setTopSalary(chartData);
-          setLoading(false);
-        } else {
-          setError("Data is not in the expected format.");
-          setLoading(false);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        setError("Error fetching data.");
-        setLoading(false);
-      });
-  }, []);
+        } 
+  }, [data]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -58,8 +41,8 @@ const TopSalary = () => {
   return (
     <>
       <div className="container-fluid">
-        <div style={{ height: "70vh", width: "100vw", marginBottom: "10vh" }}>
-          <h3>Top 10 Highest Salary Offered</h3>
+        <div style={{ height: "65vh", width: "100vw", marginBottom: "10vh" }}>
+          <h3>Top 10 Highest Salary Offered in {props.year}</h3>
           <Bar
             data={topSalary}
             options={{

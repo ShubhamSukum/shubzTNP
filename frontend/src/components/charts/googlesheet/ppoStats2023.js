@@ -2,32 +2,44 @@ import { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
 
-const TopHired = (props) => {
+export const PpoStats2023 = (props) => {
   const [topCompaniesData, setTopCompaniesData] = useState([]);
   const { data, error, loading } = props.Context();
 
   useEffect(() => {
     if (Array.isArray(data)) {
-      const sortedData = data.sort((a, b) => b.total - a.total);
+      const filteredData = data
+        .slice(1)
+        .filter((company) => company.Company.endsWith("_ppo"));
+      const sortedData = filteredData.sort((a, b) => b.Total - a.Total);
       const top10Companies = sortedData.slice(0, 10);
 
       const chartData = {
-        labels: top10Companies.map((company) => company.company),
+        labels: top10Companies.map((company) =>
+          removeSuffix(company.Company, "_ppo")
+        ),
         datasets: [
           {
-            label: "Total Hired Students",
+            label: "PPO students",
             backgroundColor: "rgba(75,192,192,0.6)",
             borderColor: "rgba(75,192,192,1)",
             borderWidth: 1,
             hoverBackgroundColor: "rgba(75,192,192,0.8)",
             hoverBorderColor: "rgba(75,192,192,1)",
-            data: top10Companies.map((company) => company.total),
+            data: top10Companies.map((company) => company.Total),
           },
         ],
       };
       setTopCompaniesData(chartData);
     }
   }, [data]);
+
+  const removeSuffix = (str, suffix) => {
+    if (str.endsWith(suffix)) {
+      return str.slice(0, -suffix.length);
+    }
+    return str;
+  };
 
   if (loading) {
     return <div>Loading... It might take 30 secs</div>;
@@ -40,8 +52,8 @@ const TopHired = (props) => {
   return (
     <>
       <div className="container-fluid">
-        <div style={{ height: "60vh", width: "80vw", marginBottom: "10vh" }}>
-          <h3>Top 10 Hiring Companies in {props.year}</h3>
+        <div style={{ height: "68vh", width: "100vw", marginBottom: "15vh" }}>
+          <h3>PPO Given by companies in {props.year}</h3>
           <Bar
             data={topCompaniesData}
             options={{
@@ -58,5 +70,3 @@ const TopHired = (props) => {
     </>
   );
 };
-
-export { TopHired };

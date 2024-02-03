@@ -45,7 +45,7 @@ export const Navbar = () => {
 
         <Link to="/company2023">
           <button className="btn btn-danger">
-            <b>2023-24 PPO</b>
+            <b>2023-24</b>
           </button>
         </Link>
       </div>

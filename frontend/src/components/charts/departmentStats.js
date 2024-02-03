@@ -1,84 +1,71 @@
 import React, { useEffect, useState } from "react";
 import { Pie } from "react-chartjs-2";
-import axios from "axios";
 import "../../App.css";
 
-const DepartmentStats = () => {
+const DepartmentStats = (props) => {
   const [itData, setItData] = useState(null);
   const [ceData, setCeData] = useState(null);
   const [entcData, setEntcData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+
+  const { data, error, loading } = props.Context();
 
   useEffect(() => {
-    axios
-      .get("https://tracktnp-backend.onrender.com/pict/2020")
-      .then((res) => {
-        const data = res.data;
+    if (Array.isArray(data)) {
+      const sumIT = data.reduce((total, company) => total + company.IT, 0);
+      const sumCE = data.reduce((total, company) => total + company.CE, 0);
+      const sumENTC = data.reduce((total, company) => total + company.ENTC, 0);
 
-        if (Array.isArray(data)) {
-          const sumIT = data.reduce((total, company) => total + company.IT, 0);
-          const sumCE = data.reduce((total, company) => total + company.CE, 0);
-          const sumENTC = data.reduce((total, company) => total + company.ENTC,0);
-          
-          const remainingInvestmentIt = 240 - sumIT;
-          const remainingInvestmentCe = 320 - sumCE;
-          const remainingInvestmentEntc = 320 - sumENTC;
+      const remainingInvestmentIt = 240 - sumIT;
+      const remainingInvestmentCe = 320 - sumCE;
+      const remainingInvestmentEntc = 320 - sumENTC;
 
-          const chartDataIT = {
-            labels: [
-              "Placed [" + sumIT + "]",
-              "Remaining [" + remainingInvestmentIt + "] out of 240",
-            ],
-            datasets: [
-              {
-                data: [sumIT, remainingInvestmentIt],
-                backgroundColor: ["#FF6384", "#36A2EB"],
-                hoverBackgroundColor: ["#FF6384", "#36A2EB"],
-              },
-            ],
-          };
+      const chartDataIT = {
+        labels: [
+          "Placed [" + sumIT + "]",
+          "Remaining [" + remainingInvestmentIt + "] out of 240",
+        ],
+        datasets: [
+          {
+            data: [sumIT, remainingInvestmentIt],
+            backgroundColor: ["#FF6384", "#36A2EB"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+          },
+        ],
+      };
 
-          const chartDataCE = {
-            labels: [
-              "Placed [" + sumCE + "]",
-              "Remaining [" + remainingInvestmentCe + "] out of 320",
-            ],
-            datasets: [
-              {
-                data: [sumCE, remainingInvestmentCe],
-                backgroundColor: ["#FF6384", "#36A2EB"],
-                hoverBackgroundColor: ["#FF6384", "#36A2EB"],
-              },
-            ],
-          };
+      const chartDataCE = {
+        labels: [
+          "Placed [" + sumCE + "]",
+          "Remaining [" + remainingInvestmentCe + "] out of 320",
+        ],
+        datasets: [
+          {
+            data: [sumCE, remainingInvestmentCe],
+            backgroundColor: ["#FF6384", "#36A2EB"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+          },
+        ],
+      };
 
-          const chartDataEntc = {
-            labels: [
-              "Placed [" + sumENTC + "]",
-              "Remaining [" + remainingInvestmentEntc + "] out of 320",
-            ],
-            datasets: [
-              {
-                data: [sumENTC, remainingInvestmentEntc],
-                backgroundColor: ["#FF6384", "#36A2EB"],
-                hoverBackgroundColor: ["#FF6384", "#36A2EB"],
-              },
-            ],
-          };
+      const chartDataEntc = {
+        labels: [
+          "Placed [" + sumENTC + "]",
+          "Remaining [" + remainingInvestmentEntc + "] out of 320",
+        ],
+        datasets: [
+          {
+            data: [sumENTC, remainingInvestmentEntc],
+            backgroundColor: ["#FF6384", "#36A2EB"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+          },
+        ],
+      };
 
-          setItData(chartDataIT);
-          setCeData(chartDataCE);
-          setEntcData(chartDataEntc);
-          setLoading(false);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        setError("Error fetching data.");
-        setLoading(false);
-      });
-  }, []);
+      setItData(chartDataIT);
+      setCeData(chartDataCE);
+      setEntcData(chartDataEntc);
+    }
+  }, [data]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -90,7 +77,7 @@ const DepartmentStats = () => {
 
   return (
     <div style={{ marginBottom: "10vh" }}>
-      <h1 style={{ marginBottom: "2vh" }}>Department-wise Stats</h1>
+      <h1 style={{ marginBottom: "2vh" }}>Department-wise Stats in {props.year}</h1>
       <div className="pie-arranging">
         <div style={{ height: "60vh", width: "80vw" }}>
           <h3>Students Placed in CE</h3>

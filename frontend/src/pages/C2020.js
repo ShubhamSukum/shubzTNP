@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
 import {BackToHome} from "../components/backToHome";
+import {api2020} from "../configs/config";
 
 export const C2020 = () => {
   const [data, setData] = useState([]);
@@ -10,7 +11,7 @@ export const C2020 = () => {
 
   useEffect(() => {
     axios
-      .get("https://tracktnp-backend.onrender.com/pict/2020")
+      .get(api2020)
       .then((res) => {
         setData(res.data);
         setLoading(false);
@@ -26,8 +27,8 @@ export const C2020 = () => {
     return (
       <>
         <div className="loader-container">
-          <div class="loader"></div>
-          <h2>Loading data...</h2>
+          <div className="loader"></div>
+          <h2>It will take 30 sec to load data...</h2>
           <h2>As it is hosted for free!!</h2>
         </div>
       </>
