@@ -1,30 +1,33 @@
-.main{
+.main {
     position: absolute;
     bottom: 0;
-    left:14.5%;
+    /* left: 14.5%; */
     border: 5px solid black;
     border-radius: 5px;
     height: 10vh;
-    width:70%;
-    /* background-color: aqua; */
+    width: 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #ffffff;
 }
 
-.nav-link{
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    border: 2px solid white;
-    padding: 3px;
+.extra {
+    color: white;
 }
 
-.home-page{
+.T {
+    width: 10vw;
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+}
+
+.home-page {
     height: 87vh;
-    width:100vw;
+    width: 100vw;
 
     display: flex;
     flex-direction: column;
@@ -32,12 +35,71 @@
     justify-content: center;
 }
 
-.home-page h1{
+
+.home-page h1 {
     font-size: 10vh;
 }
 
-.visualize-button{
-    width:20vw;
-    height:9vh;
+.visualize-button {
+    width: 20vw;
+    height: 9vh;
     font-size: larger;
+}
+
+.link-button {
+    width: 15vw;
+}
+
+.tabular-sizing .visualize-button {
+    height: 7vh;
+}
+
+@media only screen and (max-width: 700px) {
+    .home-page {
+        width: 100%;
+        height: 81vh;
+    }
+
+    .home-page h3 {
+        font-size: 3vh;
+        text-align: center;
+    }
+
+    .main {
+        width: 100vw;
+        height: 10vh;
+        position: absolute;
+        bottom: 0;
+        border: 5px solid black;
+        border-radius: 5px;
+        height: 10vh;
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #ffffff;
+        font-weight: bold;
+    }
+
+    /* .link-button {
+        font-size: small;
+        height: 40vh;
+        width: 50vw;
+    } */
+
+    .visualize-button {
+        width: 60vw;
+        height: 9vh;
+        font-size: small;
+    }
+
+    .link-button {
+        width: 25vw;
+        height: 5vh;
+        font-size: 2vh;
+    }
+
+    .extra {
+        width: 34vw;
+    }
 }

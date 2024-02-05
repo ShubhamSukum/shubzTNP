@@ -6,7 +6,11 @@ export const Home = () => {
   return (
     <>
       <div className="home-page">
-        <h1>TrackTNP</h1>
+        <h1>
+          <span style={{ color: "red", fontWeight: "700" }}>T</span>
+          rack
+          <span style={{ color: "black", fontWeight: "640" }}>TNP</span>
+        </h1>
         <h3>Unleashes the Power of Visualized College Placement Reports.</h3>
         <br />
         <br />
@@ -18,7 +22,10 @@ export const Home = () => {
         </Link>
         <br />
         <Link to={"/visualize2021"}>
-          <button className="visualize-button btn btn-warning">
+          <button
+            className="visualize-button btn btn-warning"
+            style={{ color: "white" }}
+          >
             <b>Visualize 2021-22 Data</b>
           </button>
         </Link>

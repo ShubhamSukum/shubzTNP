@@ -57,12 +57,12 @@ td {
     display: flex;
 }
 
-.yearly-stats-box{
+.yearly-stats-box {
     width: 50vh;
     height: 50vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50%, 2fr));
-    gap: 10px;  
+    gap: 10px;
 }
 
 /* charts */
@@ -87,10 +87,16 @@ td {
     height: 50px;
     animation: spin 1s linear infinite;
     margin-bottom: 16px;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* LOADER */

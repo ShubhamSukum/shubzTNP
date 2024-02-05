@@ -44,7 +44,7 @@ export const YearlyStats2023 = (props) => {
           <b>{placedStud}</b> students got placed in <b>2023-24</b>
           <hr />
           Total <b style={{ fontSize: "4vh" }}>{placedStud + ppo}</b> students
-          got including <b>PPO</b>
+          got placed including <b>PPO</b>
         </button>
         <button className="btn btn-warning">
           <b style={{ fontSize: "4vh" }}>{ppo}</b> students got PPO in 2023-24
