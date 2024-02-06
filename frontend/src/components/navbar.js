@@ -12,7 +12,6 @@ export const Navbar = () => {
             <button
               className="extra link-button fw-bold btn btn-primary"
               title="Structured into Table Format"
-              // style={{ width: "34vw" }}
             >
               Tabular Data
             </button>

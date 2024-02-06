@@ -4,7 +4,7 @@ import { api2023 } from "../configs/config";
 
 export const DataContext = createContext();
 
-export const DataProvider = ({ children }) => {
+export const DataProvider2023 = ({ children }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -31,6 +31,6 @@ export const DataProvider = ({ children }) => {
   );
 };
 
-export const useData = () => {
+export const useData2023 = () => {
   return useContext(DataContext);
 };

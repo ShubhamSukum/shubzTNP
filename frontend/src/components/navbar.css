@@ -54,15 +54,30 @@
     height: 7vh;
 }
 
-@media only screen and (max-width: 700px) {
+.up-gap {
+    font-size: 5vh;
+    margin-top: 3vh;
+}
+
+@media only screen and (max-width: 768px) {
     .home-page {
         width: 100%;
         height: 81vh;
     }
 
+    .up-gap {
+        font-size: 3vh;
+        margin-top: 3vh;
+    }
+
     .home-page h3 {
         font-size: 3vh;
         text-align: center;
+    }
+
+    .home-page h1 {
+        font-size: 7vh;
+        margin-top: 3.5vh;
     }
 
     .main {
@@ -102,4 +117,6 @@
     .extra {
         width: 34vw;
     }
+
+
 }

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
-import {BackToHome} from "../components/backToHome";
-import {api2020} from "../configs/config";
+import { BackToTabular } from "../components/backToTabular";
+import { api2020 } from "../configs/config";
 
 export const C2020 = () => {
   const [data, setData] = useState([]);
@@ -41,10 +41,13 @@ export const C2020 = () => {
 
   return (
     <center>
-      <h1 style={{ margin: "1vh" }}>2020-21<BackToHome/></h1>
+      <h1 style={{ margin: "1vh" }}>
+        2020-21
+        <BackToTabular />
+      </h1>
       <div id="table-wrapper">
         <div id="table-scroll">
-          <table className="table table-bordered">
+          <table className="table table-bordered table-striped table-sm">
             <thead>
               <tr>
                 <th className="sticky-header">

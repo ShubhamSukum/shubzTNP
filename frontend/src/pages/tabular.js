@@ -6,7 +6,7 @@ export const Tabular = () => {
   return (
     <>
       <div className="tabular-sizing home-page">
-        <h1 style={{ fontSize: "7vh", marginTop: "9vh" }}>Tabular Data</h1>
+        <span className="up-gap fw-bold">Tabular Data</span>
         <br />
 
         <Link to={"/company2020"}>

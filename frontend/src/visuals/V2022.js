@@ -8,26 +8,26 @@ import { YearlyStat } from "../components/charts/yearlyStat";
 
 import { BackToHome } from "../components/backToHome";
 
-import { DataProvider, useData } from "../context/context2022";
+import { DataProvider2022, useData2022 } from "../context/context2022";
 
 export const V2022 = () => {
   return (
     <>
-      <DataProvider>
+      <DataProvider2022>
         <center>
           <h1 style={{ marginBottom: "4vh" }}>
             Visualization for 2022-23 <BackToHome />
           </h1>
           <div className="Charts-Scrollable">
-            <TopHired year="2022-23" Context={useData}/>
-            <TopInvestors year="2022-23" Context={useData}/>
-            <DepartmentStats year="2022-23" Context={useData}/>
-            <TopSalary year="2022-23" Context={useData}/>
-            <PpoStats year="2022-23" Context={useData}/>
-            <YearlyStat year="2022-23" Context={useData}/>
+            <TopHired year="2022-23" Context={useData2022}/>
+            <TopInvestors year="2022-23" Context={useData2022}/>
+            <DepartmentStats year="2022-23" Context={useData2022}/>
+            <TopSalary year="2022-23" Context={useData2022}/>
+            <PpoStats year="2022-23" Context={useData2022}/>
+            <YearlyStat year="2022-23" Context={useData2022}/>
           </div>
         </center>
-      </DataProvider>
+      </DataProvider2022>
     </>
   );
 };

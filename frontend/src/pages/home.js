@@ -6,7 +6,7 @@ export const Home = () => {
   return (
     <>
       <div className="home-page">
-        <h1>
+        <h1 style={{ marginTop: "1vh" }}>
           <span style={{ color: "red", fontWeight: "700" }}>T</span>
           rack
           <span style={{ color: "black", fontWeight: "640" }}>TNP</span>

@@ -5,23 +5,23 @@ import { YearlyStats2023 } from "../components/charts/googlesheet/yearlyStats202
 
 import { BackToHome } from "../components/backToHome";
 
-import { DataProvider, useData } from "../context/context2023";
+import { DataProvider2023, useData2023 } from "../context/context2023";
 
 export const V2023 = () => {
   return (
     <>
-      <DataProvider>
+      <DataProvider2023>
         <center>
           <h1 style={{ marginBottom: "4vh" }}>
             Visualization for 2023-24 <BackToHome />
           </h1>
           <div className="Charts-Scrollable">
-            <TopHired2023 year="2023-24" Context={useData} />
-            <PpoStats2023 year="2023-24" Context={useData} />
-            <YearlyStats2023 year="2023-24" Context={useData} />
+            <TopHired2023 year="2023-24" Context={useData2023} />
+            <PpoStats2023 year="2023-24" Context={useData2023} />
+            <YearlyStats2023 year="2023-24" Context={useData2023} />
           </div>
         </center>
-      </DataProvider>
+      </DataProvider2023>
     </>
   );
 };

@@ -8,26 +8,26 @@ import { YearlyStat } from "../components/charts/yearlyStat";
 
 import { BackToHome } from "../components/backToHome";
 
-import { DataProvider, useData } from "../context/context2020";
+import { DataProvider2020, useData2020 } from "../context/context2020";
 
 export const V2020 = () => {
   return (
     <>
-      <DataProvider>
+      <DataProvider2020>
         <center>
           <h1 style={{ marginBottom: "4vh" }}>
             Visualization for 2020-21 <BackToHome />
           </h1>
           <div className="Charts-Scrollable">
-            <TopHired year="2020-21" Context={useData}/>
-            <TopInvestors year="2020-21" Context={useData}/>
-            <DepartmentStats year="2020-21" Context={useData}/>
-            <TopSalary year="2020-21" Context={useData}/>
-            <PpoStats year="2020-21" Context={useData}/>
-            <YearlyStat year="2020-21" Context={useData}/>
+            <TopHired year="2020-21" Context={useData2020} />
+            <TopInvestors year="2020-21" Context={useData2020} />
+            <DepartmentStats year="2020-21" Context={useData2020} />
+            <TopSalary year="2020-21" Context={useData2020} />
+            <PpoStats year="2020-21" Context={useData2020} />
+            <YearlyStat year="2020-21" Context={useData2020} />
           </div>
         </center>
-      </DataProvider>
+      </DataProvider2020>
     </>
   );
 };

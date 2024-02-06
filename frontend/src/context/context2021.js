@@ -4,7 +4,7 @@ import { api2021, api2021ppo } from "../configs/config";
 
 export const DataContext = createContext();
 
-export const DataProvider = ({ children }) => {
+export const DataProvider2021 = ({ children }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -46,6 +46,6 @@ export const DataProvider = ({ children }) => {
   );
 };
 
-export const useData = () => {
+export const useData2021 = () => {
   return useContext(DataContext);
 };

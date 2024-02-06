@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
-import { BackToHome } from "../components/backToHome";
-import {api2020ppo} from "../configs/config";
+import { BackToTabular } from "../components/backToTabular";
+import { api2020ppo } from "../configs/config";
 
 export const C2020ppo = () => {
   const [data, setData] = useState([]);
@@ -29,7 +29,7 @@ export const C2020ppo = () => {
         <div className="loader-container">
           <div className="loader"></div>
           <h2>Loading data...</h2>
-          <br/>
+          <br />
           <h2>Please wait...</h2>
         </div>
       </>
@@ -42,7 +42,10 @@ export const C2020ppo = () => {
 
   return (
     <center>
-      <h1 style={{ margin: "1vh" }}>2020-21 PPO<BackToHome/></h1>
+      <h1 style={{ margin: "1vh" }}>
+        2020-21 PPO
+        <BackToTabular />
+      </h1>
       <div id="table-wrapper">
         <div id="table-scroll">
           <table className="table table-bordered">
