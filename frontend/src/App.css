@@ -3,17 +3,21 @@
     padding: 0;
 }
 
+.C2023 {
+    width: 35%;
+}
+
 #table-wrapper {
     position: relative;
 }
 
 #table-scroll {
-    height: 80vh;
+    height: 78vh;
     overflow: auto;
 }
 
 #table-wrapper table {
-    width: 70%;
+    width: 90%;
 }
 
 #table-wrapper table * {
@@ -44,9 +48,29 @@ td {
 }
 
 @media only screen and (max-width: 768px) {
+
+    table * {
+        background: rgb(112, 235, 157);
+        color: black;
+    }
+
     table {
         font-size: 0.75rem;
         width: 100vw;
+    }
+
+    td {
+        background: rgb(112, 235, 157);
+    }
+
+    #table-scroll {
+        height: 72vh;
+        overflow: auto;
+    }
+
+    .C2023 {
+        width: 90%;
+        color: black;
     }
 }
 
