@@ -24,13 +24,19 @@ export const Tabular = () => {
         <br />
 
         <Link to={"/company2021"}>
-          <button className="visualize-button btn btn-warning">
+          <button
+            className="visualize-button btn btn-warning"
+            style={{ color: "white" }}
+          >
             <b>Tabular Data 2021-22</b>
           </button>
         </Link>
         <br />
         <Link to={"/company2021ppo"}>
-          <button className="visualize-button btn btn-warning">
+          <button
+            className="visualize-button btn btn-warning"
+            style={{ color: "white" }}
+          >
             <b>Tabular Data 2021-22 PPO</b>
           </button>
         </Link>

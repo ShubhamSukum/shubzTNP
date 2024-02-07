@@ -1,3 +1,5 @@
+/* I am sorry for this terrible CSS */
+
 * {
     margin: 0;
     padding: 0;
@@ -47,33 +49,6 @@ td {
     text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
-
-    table * {
-        background: rgb(112, 235, 157);
-        color: black;
-    }
-
-    table {
-        font-size: 0.75rem;
-        width: 100vw;
-    }
-
-    td {
-        background: rgb(112, 235, 157);
-    }
-
-    #table-scroll {
-        height: 72vh;
-        overflow: auto;
-    }
-
-    .C2023 {
-        width: 90%;
-        color: black;
-    }
-}
-
 /* charts */
 
 .Charts-Scrollable {
@@ -94,6 +69,7 @@ td {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50%, 2fr));
     gap: 10px;
+    margin-bottom: 10vh;
 }
 
 /* charts */
@@ -131,3 +107,68 @@ td {
 }
 
 /* LOADER */
+
+.bar-box {
+    height: 65vh;
+    width: 65vw;
+    margin-bottom: 10vh;
+}
+
+.ppo-stats-css {
+    height: 60vh;
+    width: 60vw;
+    margin-bottom: 20vh;
+}
+
+.marginTop-ppo {
+    margin-top: 15vh;
+}
+
+@media only screen and (max-width: 768px) {
+
+    table * {
+        background: rgb(112, 235, 157);
+        color: black;
+    }
+
+    table {
+        font-size: 0.75rem;
+        width: 100vw;
+    }
+
+    td {
+        background: rgb(112, 235, 157);
+    }
+
+    #table-scroll {
+        height: 72vh;
+        overflow: auto;
+    }
+
+    .C2023 {
+        width: 90%;
+        color: black;
+    }
+
+    .bar-box {
+        height: 35vh;
+        width: 95vw;
+        /* font-size: 0.75rem; */
+        /* margin-bottom: 10vh; */
+    }
+
+    .ppo-stats-css {
+        height: 50vh;
+        width: 95vw;
+        margin-bottom: 20vh;
+    }
+
+    .yearly-stats-box {
+        width: 47vh;
+        height: 47vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50%, 2fr));
+        gap: 10px;
+        margin-bottom: 20vh;
+    }
+}
