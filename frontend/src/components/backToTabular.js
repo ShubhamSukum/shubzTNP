@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 export const BackToTabular = () => {
   return (
     <Link to={"/tabular"}>
-      <button
-        className="btn btn-success"
-        style={{ marginLeft: "5vh", marginBottom: "1vh" }}
-      >
+      <button className="button-aahe btn btn-success">
         <b>Back</b>
       </button>
     </Link>

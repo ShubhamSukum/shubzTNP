@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../App.css";
 
 export const BackToHome = () => {
   return (
     <Link to={"/"}>
-      <button className="btn btn-success" style={{marginLeft:"5vh",marginBottom:"1vh"}}>
+      <button
+        className="button-aahe btn btn-success">
         <b>Return Home</b>
       </button>
     </Link>

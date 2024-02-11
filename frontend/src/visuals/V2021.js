@@ -15,8 +15,8 @@ export const V2021 = () => {
     <>
       <DataProvider2021>
         <center>
-          <h1 style={{ marginBottom: "4vh" }}>
-            Visualization for 2021-22 <BackToHome />
+          <h1 className="visualH1">
+            Visualization 2021-22 <BackToHome />
           </h1>
           <div className="Charts-Scrollable">
             <TopHired year="2021-22" Context={useData2021}/>

@@ -41,7 +41,7 @@ const TopSalary = (props) => {
   return (
     <>
       <div className="container-fluid">
-        <div className="bar-box marginTop-ppo">
+        <div className="bar-box">
           <h3>Top 10 Highest Salary Offered in {props.year}</h3>
           <Bar
             data={topSalary}

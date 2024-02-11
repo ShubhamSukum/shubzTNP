@@ -124,6 +124,45 @@ td {
     margin-top: 15vh;
 }
 
+.dept-init {
+    margin-bottom: 10vh;
+}
+
+.dept-init h1 {
+    margin-bottom: 3vh;
+}
+
+.pie-box {
+    height: 60vh;
+    width: 80vw;
+}
+
+.c2023TopHired {
+    height: 68vh;
+    width: 67vw;
+    margin-bottom: 15vh;
+}
+
+.visualH1 {
+    margin-bottom: 4vh;
+}
+
+.button-aahe {
+    margin-top: 0vh;
+    margin-right: 0vh;
+    margin-left: 5vh;
+    margin-bottom: 1vh;
+}
+
+.updating-live {
+    font-size: 15px;
+    background-color: red;
+    padding: 3px;
+    border-radius: 5px;
+    color: white;
+    margin: 1vh;
+}
+
 @media only screen and (max-width: 768px) {
 
     table * {
@@ -170,5 +209,57 @@ td {
         grid-template-columns: repeat(auto-fit, minmax(50%, 2fr));
         gap: 10px;
         margin-bottom: 20vh;
+    }
+
+    .dept-init {
+        margin-top: 15vh;
+    }
+
+    .dept-init h1 {
+        margin-bottom: 4vh;
+        font-size: 3vh;
+    }
+
+    .pie-box {
+        height: 60vh;
+        width: 80vw;
+    }
+
+    .pie-arranging {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .c2023TopHired {
+        height: 50vh;
+        width: 95vw;
+        margin-bottom: 15vh;
+    }
+
+    .c2023TopHired h3 {
+        font-size: 3.2vh;
+    }
+
+    .visualH1 {
+        margin-bottom: 4vh;
+        font-size: 3.7vh;
+        margin-top: 2vh;
+    }
+
+    .button-aahe {
+        margin: 1vh;
+        width: 35vw;
+        height: 4.5vh;
+        font-size: 2vh;
+    }
+
+    .updating-live {
+        font-size: 10px;
+        background-color: red;
+        padding: 3px;
+        border-radius: 5px;
+        color: white;
+        margin: 1vh;
     }
 }

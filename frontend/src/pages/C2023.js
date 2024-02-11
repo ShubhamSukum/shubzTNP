@@ -52,20 +52,8 @@ export const C2023 = () => {
             alignItems: "center",
           }}
         >
-          <h1 style={{ margin: "1vh" }}>2023-24 </h1>
-          <span
-            style={{
-              fontSize: "15px",
-              backgroundColor: "red",
-              padding: "3px",
-              borderRadius: "5px",
-              color: "white",
-              margin: "1vh",
-            }}
-            className="fw-bold"
-          >
-            Updating Live...
-          </span>
+          <h1 style={{ margin: "1vh" }}>2023-24</h1>
+          <span className="updating-live fw-bold">Updating Live...</span>
           <span style={{ marginTop: "1vh" }}>
             <BackToTabular />
           </span>
@@ -74,7 +62,7 @@ export const C2023 = () => {
 
         <div className="C2023">
           <div id="table-scroll">
-            <table className="table table-bordered table-sm table-hover ">
+            <table className="table table-bordered table-sm table-hover">
               <thead>
                 <tr>
                   <th className="sticky-header">

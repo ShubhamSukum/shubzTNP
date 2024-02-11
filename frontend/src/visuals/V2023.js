@@ -12,8 +12,8 @@ export const V2023 = () => {
     <>
       <DataProvider2023>
         <center>
-          <h1 style={{ marginBottom: "4vh" }}>
-            Visualization for 2023-24 <BackToHome />
+          <h1 className="visualH1">
+            Visualization 2023-24 <BackToHome />
           </h1>
           <div className="Charts-Scrollable">
             <TopHired2023 year="2023-24" Context={useData2023} />

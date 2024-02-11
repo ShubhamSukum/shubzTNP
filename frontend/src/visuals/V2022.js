@@ -15,16 +15,16 @@ export const V2022 = () => {
     <>
       <DataProvider2022>
         <center>
-          <h1 style={{ marginBottom: "4vh" }}>
-            Visualization for 2022-23 <BackToHome />
+          <h1 className="visualH1">
+            Visualization 2022-23 <BackToHome />
           </h1>
           <div className="Charts-Scrollable">
-            <TopHired year="2022-23" Context={useData2022}/>
-            <TopInvestors year="2022-23" Context={useData2022}/>
-            <DepartmentStats year="2022-23" Context={useData2022}/>
-            <TopSalary year="2022-23" Context={useData2022}/>
-            <PpoStats year="2022-23" Context={useData2022}/>
-            <YearlyStat year="2022-23" Context={useData2022}/>
+            <TopHired year="2022-23" Context={useData2022} />
+            <TopInvestors year="2022-23" Context={useData2022} />
+            <DepartmentStats year="2022-23" Context={useData2022} />
+            <TopSalary year="2022-23" Context={useData2022} />
+            <PpoStats year="2022-23" Context={useData2022} />
+            <YearlyStat year="2022-23" Context={useData2022} />
           </div>
         </center>
       </DataProvider2022>
