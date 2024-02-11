@@ -38,24 +38,24 @@ const TopHired = (props) => {
   }
 
   return (
-    <>
-      <div className="container-fluid">
-        <div style={{ height: "60vh", width: "80vw", marginBottom: "10vh" }}>
-          <h3>Top 10 Hiring Companies in {props.year}</h3>
-          <Bar
-            data={topCompaniesData}
-            options={{
-              scales: {
-                y: {
-                  type: "linear",
-                  beginAtZero: true,
-                },
+    <div className="container-fluid">
+      <div className="bar-box">
+        <h3>Top 10 Hiring Companies in {props.year}</h3>
+        <Bar
+          data={topCompaniesData}
+          options={{
+            scales: {
+              y: {
+                type: "linear",
+                beginAtZero: true,
               },
-            }}
-          />
-        </div>
+            },
+            maintainAspectRatio: false, // This line makes the chart responsive
+            responsive: true,
+          }}
+        />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -52,7 +52,7 @@ export const PpoStats2023 = (props) => {
   return (
     <>
       <div className="container-fluid">
-        <div style={{ height: "68vh", width: "100vw", marginBottom: "15vh" }}>
+        <div className="c2023TopHired">
           <h3>PPO Given by companies in {props.year}</h3>
           <Bar
             data={topCompaniesData}
@@ -63,6 +63,8 @@ export const PpoStats2023 = (props) => {
                   beginAtZero: true,
                 },
               },
+              maintainAspectRatio:false,
+              responsive:true
             }}
           />
         </div>

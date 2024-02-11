@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
-import { BackToHome } from "../components/backToHome";
-import {api2023} from "../configs/config";
+import { BackToTabular } from "../components/backToTabular";
+import { api2023 } from "../configs/config";
 
 export const C2023 = () => {
   const [data, setData] = useState([]);
@@ -29,7 +29,7 @@ export const C2023 = () => {
         <div className="loader-container">
           <div className="loader"></div>
           <h2>Loading data...</h2>
-          <br/>
+          <br />
           <h2>Please wait...</h2>
         </div>
       </>
@@ -43,11 +43,26 @@ export const C2023 = () => {
   return (
     <>
       <center>
-        <h1 style={{ margin: "1vh" }}>2023-24<BackToHome/></h1>
+        <span
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            width: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <h1 style={{ margin: "1vh" }}>2023-24</h1>
+          <span className="updating-live fw-bold">Updating Live...</span>
+          <span style={{ marginTop: "1vh" }}>
+            <BackToTabular />
+          </span>
+        </span>
+        {/* </h1> */}
 
-        <div id="table-wrapper">
+        <div className="C2023">
           <div id="table-scroll">
-            <table style={{ width: "80vh" }} className="table table-bordered">
+            <table className="table table-bordered table-sm table-hover">
               <thead>
                 <tr>
                   <th className="sticky-header">

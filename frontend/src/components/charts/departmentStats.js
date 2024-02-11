@@ -76,18 +76,18 @@ const DepartmentStats = (props) => {
   }
 
   return (
-    <div style={{ marginBottom: "10vh" }}>
-      <h1 style={{ marginBottom: "2vh" }}>Department-wise Stats in {props.year}</h1>
+    <div className="dept-init">
+      <h1>Department-wise Stats in {props.year}</h1>
       <div className="pie-arranging">
-        <div style={{ height: "60vh", width: "80vw" }}>
+        <div className="pie-box">
           <h3>Students Placed in CE</h3>
           {ceData && <Pie data={ceData} height={150} width={300} />}
         </div>
-        <div style={{ height: "60vh", width: "80vw" }}>
+        <div className="pie-box">
           <h3>Students Placed in IT</h3>
           {itData && <Pie data={itData} height={150} width={300} />}
         </div>
-        <div style={{ height: "60vh", width: "80vw" }}>
+        <div className="pie-box">
           <h3>Students Placed in ENTC</h3>
           {entcData && <Pie data={entcData} height={150} width={300} />}
         </div>

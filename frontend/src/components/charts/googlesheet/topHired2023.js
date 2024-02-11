@@ -43,7 +43,7 @@ export const TopHired2023 = (props) => {
   return (
     <>
       <div className="container-fluid">
-        <div style={{ height: "72vh", width: "100vw", marginBottom: "10vh" }}>
+        <div className="c2023TopHired">
           <h3>Top 10 Hiring Companies in {props.year}</h3>
           <Bar
             data={topCompaniesData}
@@ -54,6 +54,8 @@ export const TopHired2023 = (props) => {
                   beginAtZero: true,
                 },
               },
+              maintainAspectRatio: false,
+              responsive: true,
             }}
           />
         </div>

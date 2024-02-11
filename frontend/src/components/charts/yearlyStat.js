@@ -6,9 +6,10 @@ export const YearlyStat = (props) => {
   const [invest, setInvest] = useState("");
 
   const [ppo, setPpo] = useState("");
-  const [investPpo, setInvestPpo] = useState(""); 
+  const [investPpo, setInvestPpo] = useState("");
 
-  const { data, dataPpo, error, errorPpo, loading, loadingPpo } = props.Context();
+  const { data, dataPpo, error, errorPpo, loading, loadingPpo } =
+    props.Context();
 
   useEffect(() => {
     // for Normal
@@ -53,7 +54,7 @@ export const YearlyStat = (props) => {
     <>
       <h1>Yearly Stats for {props.year}</h1>
       <br />
-      <div className="yearly-stats-box" style={{ marginBottom: "10vh" }}>
+      <div className="yearly-stats-box">
         <button className="btn btn-success">
           <b>{placedStud}</b> students got placed in 2020-21
         </button>

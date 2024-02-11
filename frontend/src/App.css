@@ -1,6 +1,12 @@
+/* I am sorry for this terrible CSS */
+
 * {
     margin: 0;
     padding: 0;
+}
+
+.C2023 {
+    width: 35%;
 }
 
 #table-wrapper {
@@ -8,12 +14,12 @@
 }
 
 #table-scroll {
-    height: 80vh;
+    height: 78vh;
     overflow: auto;
 }
 
 #table-wrapper table {
-    width: 70%;
+    width: 90%;
 }
 
 #table-wrapper table * {
@@ -57,12 +63,13 @@ td {
     display: flex;
 }
 
-.yearly-stats-box{
+.yearly-stats-box {
     width: 50vh;
     height: 50vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50%, 2fr));
-    gap: 10px;  
+    gap: 10px;
+    margin-bottom: 10vh;
 }
 
 /* charts */
@@ -87,10 +94,172 @@ td {
     height: 50px;
     animation: spin 1s linear infinite;
     margin-bottom: 16px;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* LOADER */
+
+.bar-box {
+    height: 65vh;
+    width: 65vw;
+    margin-bottom: 10vh;
+}
+
+.ppo-stats-css {
+    height: 60vh;
+    width: 60vw;
+    margin-bottom: 20vh;
+}
+
+.marginTop-ppo {
+    margin-top: 15vh;
+}
+
+.dept-init {
+    margin-bottom: 10vh;
+}
+
+.dept-init h1 {
+    margin-bottom: 3vh;
+}
+
+.pie-box {
+    height: 60vh;
+    width: 80vw;
+}
+
+.c2023TopHired {
+    height: 68vh;
+    width: 67vw;
+    margin-bottom: 15vh;
+}
+
+.visualH1 {
+    margin-bottom: 4vh;
+}
+
+.button-aahe {
+    margin-top: 0vh;
+    margin-right: 0vh;
+    margin-left: 5vh;
+    margin-bottom: 1vh;
+}
+
+.updating-live {
+    font-size: 15px;
+    background-color: red;
+    padding: 3px;
+    border-radius: 5px;
+    color: white;
+    margin: 1vh;
+}
+
+@media only screen and (max-width: 768px) {
+
+    table * {
+        background: rgb(112, 235, 157);
+        color: black;
+    }
+
+    table {
+        font-size: 0.75rem;
+        width: 100vw;
+    }
+
+    td {
+        background: rgb(112, 235, 157);
+    }
+
+    #table-scroll {
+        height: 72vh;
+        overflow: auto;
+    }
+
+    .C2023 {
+        width: 90%;
+        color: black;
+    }
+
+    .bar-box {
+        height: 35vh;
+        width: 95vw;
+        /* font-size: 0.75rem; */
+        /* margin-bottom: 10vh; */
+    }
+
+    .ppo-stats-css {
+        height: 50vh;
+        width: 95vw;
+        margin-bottom: 20vh;
+    }
+
+    .yearly-stats-box {
+        width: 47vh;
+        height: 47vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50%, 2fr));
+        gap: 10px;
+        margin-bottom: 20vh;
+    }
+
+    .dept-init {
+        margin-top: 15vh;
+    }
+
+    .dept-init h1 {
+        margin-bottom: 4vh;
+        font-size: 3vh;
+    }
+
+    .pie-box {
+        height: 60vh;
+        width: 80vw;
+    }
+
+    .pie-arranging {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .c2023TopHired {
+        height: 50vh;
+        width: 95vw;
+        margin-bottom: 15vh;
+    }
+
+    .c2023TopHired h3 {
+        font-size: 3.2vh;
+    }
+
+    .visualH1 {
+        margin-bottom: 4vh;
+        font-size: 3.7vh;
+        margin-top: 2vh;
+    }
+
+    .button-aahe {
+        margin: 1vh;
+        width: 35vw;
+        height: 4.5vh;
+        font-size: 2vh;
+    }
+
+    .updating-live {
+        font-size: 10px;
+        background-color: red;
+        padding: 3px;
+        border-radius: 5px;
+        color: white;
+        margin: 1vh;
+    }
+}
