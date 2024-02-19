@@ -56,18 +56,18 @@ export const YearlyStat = (props) => {
       <br />
       <div className="yearly-stats-box">
         <button className="btn btn-success">
-          <b>{placedStud}</b> students got placed in 2020-21
+          <b>{placedStud}</b> students got placed in {props.year}
         </button>
         <button className="btn btn-primary">
           Companies invested over <b>{invest} Lakhs</b> on PICT students in
-          2020-21
+          {props.year}
         </button>
         <button className="btn btn-success">
-          <b>{ppo}</b> students got PPO in 2020-21
+          <b>{ppo}</b> students got PPO in {props.year}
         </button>
         <button className="btn btn-primary">
           Companies invested over <b>{investPpo}</b> Lakhs in PICT students PPO
-          in 2020-21
+          in {props.year}
         </button>
       </div>
     </>
