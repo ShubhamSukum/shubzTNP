@@ -6,14 +6,27 @@ export const Home = () => {
   return (
     <>
       <div className="home-page">
-        <h1 style={{ marginTop: "1vh" }}>
-          <span style={{ color: "red", fontWeight: "700" }}>T</span>
+        <h1 className="h1trackTNP">
+          <span className="spanTrack">T</span>
           rack
-          <span style={{ color: "black", fontWeight: "640" }}>TNP</span>
+          <span className="spanTNP">TNP</span>
+          <span className="centering">
+            <button id="spanSpacing" className="btn btn-secondary">
+              <h4 id="spanFont1" className="fw-bold">
+                bit.ly/tracktnp
+              </h4>
+            </button>
+
+            <button id="spanSpacing" className="btn btn-secondary">
+              <h4 id="spanFont2" className="fw-bold">
+                About
+              </h4>
+            </button>
+          </span>
         </h1>
-        <h3>Unleashes the Power of Visualized College Placement Reports.</h3>
-        <br />
-        <br />
+        <h3 className="h3Margin">
+          Unleashes the Power of Visualized College Placement Reports.
+        </h3>
 
         <Link to={"/visualize2020"}>
           <button className="visualize-button btn btn-primary">

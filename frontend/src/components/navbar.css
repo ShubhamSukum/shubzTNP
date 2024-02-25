@@ -59,6 +59,42 @@
     margin-top: 3vh;
 }
 
+.h3Margin {
+    margin-bottom: 4vh;
+}
+
+.spanTNP {
+    color: black;
+    font-weight: 640;
+}
+
+.spanTrack {
+    color: red;
+    font-weight: 700;
+}
+
+.h1trackTNP {
+    margin-bottom: 3.5vh;
+    text-align: center;
+}
+
+#spanFont1 {
+    font-size: 3vh !important;
+    height: 3vh;
+    width: 10vw;
+}
+
+#spanFont2 {
+    font-size: 3vh !important;
+    height: 3vh;
+    width: 5vw;
+}
+
+#spanSpacing {
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+
 @media only screen and (max-width: 768px) {
     .home-page {
         width: 100%;
@@ -118,5 +154,40 @@
         width: 34vw;
     }
 
+    .h3Margin {
+        margin-bottom: 2.5vh;
+    }
 
+    .h1trackTNP {
+        margin-top: 0vh;
+        margin-bottom: 4vh;
+        font-size: 7vh !important;
+    }`
+
+    .spanTNP {
+        color: black;
+        font-weight: 640;
+    }
+
+    .spanTrack {
+        color: red;
+        font-weight: 700;
+    }
+
+    #spanFont1 {
+        font-size: 2.5vh !important;
+        height: 2vh;
+        width: 30vw;
+    }
+
+    #spanFont2 {
+        font-size: 3vh !important;
+        height: 3vh;
+        width: 15vw;
+    }
+
+    #spanSpacing {
+        margin-left: 0.5vh;
+        margin-right: 0.5vh;
+    }
 }
