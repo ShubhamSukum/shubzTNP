@@ -6,6 +6,7 @@ import { Navbar } from "./components/navbar";
 import { Home } from "./pages/home";
 import { Tabular } from "./pages/tabular";
 import { FeedXP } from "./FeedXP/feedXP";
+import { About } from "./pages/about";
 
 import { C2023 } from "./pages/C2023";
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/tabular" element={<Tabular />} />
           <Route path="/feedXP" element={<FeedXP />} />
+          <Route path="/about" element={<About />} />
 
           <Route path="/company2020" element={<Table2020 />} />
           <Route path="/company2020PPO" element={<Table2020Ppo />} />
@@ -52,7 +54,6 @@ function App() {
           <Route path="/visualize2023" element={<V2023 />} />
 
           {/* Chart JS */}
-          
         </Routes>
         <Navbar />
       </Router>

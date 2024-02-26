@@ -1,27 +1,36 @@
 import React from "react";
 import "../components/navbar.css";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
+
 
 export const Home = () => {
+  const navigate=useNavigate();
+
   return (
     <>
       <div className="home-page">
         <h1 className="h1trackTNP">
           <span className="spanTrack">T</span>
-          rack
+          <span className="spanRack">rack</span>
           <span className="spanTNP">TNP</span>
           <span className="centering">
-            <button id="spanSpacing" className="btn btn-secondary">
+            <span id="spanSpacing" className="redColor btn btn-danger">
+              <h4 id="spanFont2" className="fw-bold" style={{ Color: "white" }} onClick={()=>navigate("/about")}>
+                About
+              </h4>
+            </span>
+
+            <button id="spanSpacing" className="btn btn-dark">
               <h4 id="spanFont1" className="fw-bold">
                 bit.ly/tracktnp
               </h4>
             </button>
 
-            <button id="spanSpacing" className="btn btn-secondary">
-              <h4 id="spanFont2" className="fw-bold">
+            {/* <button id="spanSpacing" className="btn btn-dark">
+              <h4 id="spanFont2" className="fw-bold" style={{ Color: "white" }}>
                 About
               </h4>
-            </button>
+            </button> */}
           </span>
         </h1>
         <h3 className="h3Margin">

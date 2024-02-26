@@ -32,9 +32,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 5vh;
 }
-
 
 .home-page h1 {
     font-size: 10vh;
@@ -56,7 +56,7 @@
 
 .up-gap {
     font-size: 5vh;
-    margin-top: 3vh;
+    /* margin-top: 3vh; */
 }
 
 .h3Margin {
@@ -71,6 +71,14 @@
 .spanTrack {
     color: red;
     font-weight: 700;
+}
+
+.spanRack {
+    color: black;
+}
+
+.redColor {
+    background-color: red;
 }
 
 .h1trackTNP {
@@ -97,6 +105,7 @@
 
 @media only screen and (max-width: 768px) {
     .home-page {
+        margin-top: 0vh;
         width: 100%;
         height: 81vh;
     }
@@ -141,7 +150,7 @@
     .visualize-button {
         width: 60vw;
         height: 9vh;
-        font-size: small;
+        font-size: 2.2vh;
     }
 
     .link-button {
@@ -162,7 +171,7 @@
         margin-top: 0vh;
         margin-bottom: 4vh;
         font-size: 7vh !important;
-    }`
+    }
 
     .spanTNP {
         color: black;
@@ -171,7 +180,7 @@
 
     .spanTrack {
         color: red;
-        font-weight: 700;
+        font-weight: 1000;
     }
 
     #spanFont1 {
@@ -181,12 +190,13 @@
     }
 
     #spanFont2 {
-        font-size: 3vh !important;
+        font-size: 2.7vh !important;
         height: 3vh;
         width: 15vw;
     }
 
     #spanSpacing {
+        height: 4.5vh;
         margin-left: 0.5vh;
         margin-right: 0.5vh;
     }
