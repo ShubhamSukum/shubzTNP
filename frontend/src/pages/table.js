@@ -31,7 +31,7 @@ export const Table2021 = () => {
 export const Table2021Ppo = () => {
   return (
     <DataProvider2021>
-      <TablePpo year="2020-21 PPO" Context={useData2021} />
+      <TablePpo year="2021-22 PPO" Context={useData2021} />
     </DataProvider2021>
   );
 };
@@ -47,7 +47,7 @@ export const Table2022 = () => {
 export const Table2022Ppo = () => {
   return (
     <DataProvider2022>
-      <TablePpo year="2020-23 PPO" Context={useData2022} />
+      <TablePpo year="2022-23 PPO" Context={useData2022} />
     </DataProvider2022>
   );
 };

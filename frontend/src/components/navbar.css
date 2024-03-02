@@ -32,9 +32,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 5vh;
 }
-
 
 .home-page h1 {
     font-size: 10vh;
@@ -56,11 +56,77 @@
 
 .up-gap {
     font-size: 5vh;
-    margin-top: 3vh;
+    /* margin-top: 3vh; */
+}
+
+.h3Margin {
+    margin-bottom: 4vh;
+}
+
+.spanTNP {
+    color: black;
+    font-weight: 640;
+}
+
+.spanTrack {
+    color: red;
+    font-weight: 700;
+}
+
+.spanRack {
+    color: black;
+}
+
+.redColor {
+    background-color: red;
+}
+
+.h1trackTNP {
+    margin-bottom: 3.5vh;
+    text-align: center;
+}
+
+#spanFont1 {
+    font-size: 3vh !important;
+    height: 3vh;
+    width: 10vw;
+}
+
+#spanFont2 {
+    font-size: 3vh !important;
+    height: 3vh;
+    width: 5vw;
+}
+
+#spanSpacing {
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+
+.red {
+    color: red;
+}
+
+.black {
+    color: black;
+}
+
+.align-text-center {
+    height: 8vh;
+    border: 5px solid black;
+    text-align: center;
+}
+
+.TrackTNP-motive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center !important;
 }
 
 @media only screen and (max-width: 768px) {
     .home-page {
+        margin-top: 0vh;
         width: 100%;
         height: 81vh;
     }
@@ -105,7 +171,7 @@
     .visualize-button {
         width: 60vw;
         height: 9vh;
-        font-size: small;
+        font-size: 2.2vh;
     }
 
     .link-button {
@@ -118,5 +184,49 @@
         width: 34vw;
     }
 
+    .h3Margin {
+        margin-bottom: 2.5vh;
+    }
 
+    .h1trackTNP {
+        margin-top: 0vh;
+        margin-bottom: 4vh;
+        font-size: 7vh !important;
+    }
+
+    .spanTNP {
+        color: black;
+        font-weight: 640;
+    }
+
+    .spanTrack {
+        color: red;
+        font-weight: 1000;
+    }
+
+    #spanFont1 {
+        font-size: 2.5vh !important;
+        height: 2vh;
+        width: 30vw;
+    }
+
+    #spanFont2 {
+        font-size: 2.7vh !important;
+        height: 3vh;
+        width: 15vw;
+    }
+
+    #spanSpacing {
+        height: 4.5vh;
+        margin-left: 0.5vh;
+        margin-right: 0.5vh;
+    }
+
+    .black {
+        font-size: 3.5vh;
+    }
+
+    .red {
+        font-size: 3.5vh;
+    }
 }

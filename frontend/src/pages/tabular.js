@@ -45,7 +45,7 @@ export const Tabular = () => {
 
         <Link to={"/company2022"}>
           <button className="visualize-button btn btn-success">
-            <b>Tabular Data 2020-23</b>
+            <b>Tabular Data 2022-23</b>
           </button>
         </Link>
         <br />
