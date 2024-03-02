@@ -2,7 +2,6 @@ import React from "react";
 import "../components/navbar.css";
 import { Link ,useNavigate} from "react-router-dom";
 
-
 export const Home = () => {
   const navigate=useNavigate();
 
