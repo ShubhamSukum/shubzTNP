@@ -8,7 +8,6 @@ export const FeedXP = () => {
           marginTop: "2.5vh",
           height: "85vh",
           width: "100vw",
-          // border: "1px black solid",
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",

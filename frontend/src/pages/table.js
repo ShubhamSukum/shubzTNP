@@ -1,5 +1,5 @@
 import "../App.css";
-import { BackToTabular } from "../components/backToTabular";
+import { BackToTabular } from "../components/backButtons/backToTabular";
 import { DataProvider2020, useData2020 } from "../context/context2020";
 import { DataProvider2021, useData2021 } from "../context/context2021";
 import { DataProvider2022, useData2022 } from "../context/context2022";

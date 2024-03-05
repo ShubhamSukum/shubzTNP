@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
-import { BackToTabular } from "../components/backToTabular";
+import { BackToTabular } from "../components/backButtons/backToTabular";
 import { api2023 } from "../configs/config";
 
 export const C2023 = () => {

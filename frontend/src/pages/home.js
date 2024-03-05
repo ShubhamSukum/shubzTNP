@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/navbar.css";
+import "../components/navbar/navbar.css";
 import { Link ,useNavigate} from "react-router-dom";
 
 export const Home = () => {
@@ -24,12 +24,6 @@ export const Home = () => {
                 bit.ly/tracktnp
               </h4>
             </button>
-
-            {/* <button id="spanSpacing" className="btn btn-dark">
-              <h4 id="spanFont2" className="fw-bold" style={{ Color: "white" }}>
-                About
-              </h4>
-            </button> */}
           </span>
         </h1>
         <h3 className="h3Margin">

@@ -6,7 +6,7 @@ import { TopSalary } from "../components/charts/topSalary";
 import { PpoStats } from "../components/charts/ppoStats";
 import { YearlyStat } from "../components/charts/yearlyStat";
 
-import { BackToHome } from "../components/backToHome";
+import { BackToHome } from "../components/backButtons/backToHome";
 
 import { DataProvider2020, useData2020 } from "../context/context2020";
 

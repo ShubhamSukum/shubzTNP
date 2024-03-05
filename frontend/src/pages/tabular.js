@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/navbar.css";
+import "../components/navbar/navbar.css";
 import { Link } from "react-router-dom";
 
 export const Tabular = () => {

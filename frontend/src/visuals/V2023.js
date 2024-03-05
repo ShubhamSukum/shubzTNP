@@ -3,7 +3,7 @@ import { TopHired2023 } from "../components/charts/googlesheet/topHired2023";
 import { PpoStats2023 } from "../components/charts/googlesheet/ppoStats2023";
 import { YearlyStats2023 } from "../components/charts/googlesheet/yearlyStats2023";
 
-import { BackToHome } from "../components/backToHome";
+import { BackToHome } from "../components/backButtons/backToHome";
 
 import { DataProvider2023, useData2023 } from "../context/context2023";
 
