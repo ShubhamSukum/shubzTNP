@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 
 import { routerZero } from "./src/routes/company.js";
+import { feedRouter } from "./src/routes/feedXP.js";
 
 const app = express();
 
@@ -16,9 +17,11 @@ app.use(cors());
 dotenv.config();
 const MONGO_LINK = process.env.MONGO_LINK;
 const api = process.env.api;
+const feedXP= process.env.feedXP;
 
 // APIs
 app.use(api, routerZero);
+app.use(feedXP, feedRouter);
 
 // ping api to KEEP server running
 app.get("/ping", (req, res) => {
